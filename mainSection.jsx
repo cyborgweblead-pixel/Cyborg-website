@@ -50,8 +50,8 @@ const MainSection = ({ data }) => {
     if (!aIsLead && bIsLead) return 1;  //b comes first
 
     //2. sort based on sub-system order if roles are in same category(both leads or both members)
-    const indexA = subSystemOrder.indexOf(a.sub_system);  //if not found, index will be -1
-    const indexB = subSystemOrder.indexOf(b.sub_system);  //if not found, index will be -1
+    const indexA = subSystemOrder.indexOf(a.subsystem);  //if not found, index will be -1
+    const indexB = subSystemOrder.indexOf(b.subsystem);  //if not found, index will be -1
     
     // Handle subsystems not in our defined order by placing them at the end
     const effectiveIndexA = indexA === -1 ? Infinity : indexA;
@@ -96,3 +96,4 @@ const MainSection = ({ data }) => {
 };
 
 export default MainSection;
+
